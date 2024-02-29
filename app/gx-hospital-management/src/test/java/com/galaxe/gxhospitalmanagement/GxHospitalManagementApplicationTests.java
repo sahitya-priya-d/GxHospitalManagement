@@ -1,4 +1,4 @@
-package com.galaxe.GxHospitalManagement;
+package com.galaxe.gxhospitalmanagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

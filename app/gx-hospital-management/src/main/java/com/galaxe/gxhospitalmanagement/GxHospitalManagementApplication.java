@@ -1,4 +1,4 @@
-package com.galaxe.GxHospitalManagement;
+package com.galaxe.gxhospitalmanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
