@@ -24,7 +24,7 @@ public class SecurityConfiguration {
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests(auth -> {
-			auth.requestMatchers("api/gxHospital/users/**").permitAll();
+			auth.requestMatchers("api/gxHospital/**").permitAll();
 			auth.anyRequest().authenticated();
 		});
 		http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));

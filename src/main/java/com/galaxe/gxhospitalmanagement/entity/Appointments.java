@@ -1,5 +1,6 @@
 package com.galaxe.gxhospitalmanagement.entity;
 
+import java.time.LocalTime;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -8,24 +9,23 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-public class Department {
+public class Appointments {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long deptId;
+	private Long appointmentId;
+
+	private LocalTime appointmentTime;
 	
-	private String deptName;
-	
-	private String image;
-	
-	  @OneToMany(mappedBy = "department")
-	    private List<Doctors> doctors;
-	
+	@OneToMany(mappedBy = "appointments")
+	private List<Patients> patients;
 }

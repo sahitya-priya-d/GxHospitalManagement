@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import com.galaxe.gxhospitalmanagement.dto.LoginRequestDto;
 import com.galaxe.gxhospitalmanagement.dto.LoginResponseDto;
+import com.galaxe.gxhospitalmanagement.entity.Role;
 import com.galaxe.gxhospitalmanagement.entity.Users;
 
 @Component
@@ -52,11 +53,10 @@ public class UserMapper {
      * @param token JWT token to be included in the AuthenticationResponse
      * @return AuthenticationResponse with the provided JWT token
      */
-    public LoginResponseDto mapToAuthenticationResponse(String token) {
+    public LoginResponseDto mapToAuthenticationResponse(String token, Role role) {
         return LoginResponseDto.builder()
                 .token(token)
-              
+                .role(role) 
                 .build();
     }
-
 }

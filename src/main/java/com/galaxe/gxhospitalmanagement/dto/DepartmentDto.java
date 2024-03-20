@@ -10,4 +10,5 @@ import lombok.NoArgsConstructor;
 public class DepartmentDto {
 	  private Long deptId;
 	    private String deptName;
+	    private String image;
 }

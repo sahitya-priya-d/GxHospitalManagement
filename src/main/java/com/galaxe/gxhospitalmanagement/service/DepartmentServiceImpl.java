@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.galaxe.gxhospitalmanagement.dto.DepartmentDto;
+import com.galaxe.gxhospitalmanagement.dto.DoctorDto;
 import com.galaxe.gxhospitalmanagement.entity.Department;
+import com.galaxe.gxhospitalmanagement.entity.Doctors;
 import com.galaxe.gxhospitalmanagement.mapper.EntityDtoConverter;
 import com.galaxe.gxhospitalmanagement.repository.DepartmentRepository;
 
@@ -19,6 +21,7 @@ public class DepartmentServiceImpl implements DepartmentService{
 
     @Autowired
     private EntityDtoConverter entityDTOConverter;
+    
 
     @Override
     public List<DepartmentDto> getAllDepartments() {
@@ -54,4 +57,5 @@ public class DepartmentServiceImpl implements DepartmentService{
                 .map(entityDTOConverter::departmentToDepartmentDTO)
                 .collect(Collectors.toList());
     }
+    
 }

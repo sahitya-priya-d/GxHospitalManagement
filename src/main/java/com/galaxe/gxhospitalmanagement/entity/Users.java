@@ -19,6 +19,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -78,7 +79,8 @@ public class Users implements UserDetails{
 		return true;
 	}
 	
-	
+	@OneToMany(mappedBy = "user")
+	private List<Patients> patients;
 	
 
 }

@@ -17,7 +17,7 @@ import com.galaxe.gxhospitalmanagement.dto.DepartmentDto;
 import com.galaxe.gxhospitalmanagement.service.DepartmentService;
 
 @CrossOrigin(origins = "http://localhost:3000")
-@RequestMapping("api/GxHospital/Department")
+@RequestMapping("api/gxHospital/department")
 @RestController
 public class DepartmentController {
 
@@ -48,4 +48,5 @@ public class DepartmentController {
     public List<DepartmentDto> getDepartmentsByName(@PathVariable String name) {
         return departmentService.getDepartmentsByName(name);
     }
+    
 }

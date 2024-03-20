@@ -16,6 +16,7 @@ import com.galaxe.gxhospitalmanagement.dto.LoginRequestDto;
 import com.galaxe.gxhospitalmanagement.dto.LoginResponseDto;
 import com.galaxe.gxhospitalmanagement.dto.PasswordUpdateDto;
 import com.galaxe.gxhospitalmanagement.dto.UsersDto;
+import com.galaxe.gxhospitalmanagement.entity.Role;
 import com.galaxe.gxhospitalmanagement.entity.Users;
 import com.galaxe.gxhospitalmanagement.exception.PasswordMismatchingException;
 
@@ -88,23 +89,23 @@ public class UsersServiceImpl implements UsersService {
 			throw new UserNotFoundException("User not found for the provided email");
 		}
 	}
-
 	@Override
 	public LoginResponseDto authenticate(LoginRequestDto request) {
-		try {
-			authenticationManager
-					.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
+	    try {
+	        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
 
-			Users user = userRepository.findByEmail(request.getEmail());
+	        Users user = userRepository.findByEmail(request.getEmail());
 
-			String jwtToken = jwtService.generateToken(user);
+	        String jwtToken = jwtService.generateToken(user);
+	        
+	        
+	        Role userRole = user.getRole();
 
-			return userMapper.mapToAuthenticationResponse(jwtToken);
-		} catch (BadCredentialsException e) {
-			throw new BadCredentialsException("Invalid credentials");
-		} catch (UsernameNotFoundException | InternalAuthenticationServiceException e) {
-			throw new UsernameNotFoundException("User not found !");
-		}
+	        return userMapper.mapToAuthenticationResponse(jwtToken, userRole);
+	    } catch (BadCredentialsException e) {
+	        throw new BadCredentialsException("Invalid credentials");
+	    } catch (UsernameNotFoundException | InternalAuthenticationServiceException e) {
+	        throw new UsernameNotFoundException("User not found !");
+	    }
 	}
-
 }

@@ -12,5 +12,9 @@ public class DoctorDto {
 	 private Long doctorId;
 	    private String doctorName;
 	    private String image;
+	    private Long experience;
+		private Double fee;
 	    private DepartmentDto department;
+	    private BranchDTO branch; 
+	    
 }
