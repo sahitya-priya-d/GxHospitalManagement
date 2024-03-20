@@ -1,0 +1,91 @@
+.searchbar {
+    display: flex;
+    align-items: center; 
+}
+.searchbar input{
+    margin-right: 50px!important; 
+}
+ .searchbar input{
+    
+    display: block;
+    padding: 9.5px;
+    width: 32%!important;
+    border-radius: 5rem;
+    font-family: inherit !important;
+    font-size: 100% !important;
+    line-height: 1.15 !important;
+    margin: 0 !important;
+    background: #EFEFEF;
+    color: #000000;
+    border: 0px solid #e2e2e2;
+    overflow: visible;
+    margin-left: 27rem!important;
+    outline: none;
+    margin-top: 2rem!important;
+}
+.filter-type{
+    font-size: 1rem;
+    color: black;
+    margin-left: 3.2rem;
+    font-family: Monsterrat!important;
+  }
+  .filter-options{
+    display: flex;
+    margin-top: 1rem;
+  }
+  select {
+    padding: 5px!important;
+    margin-right: 10px!important;
+    margin-left: 0rem!important;
+    border-color: #29aae4;
+    height: 1.99rem!important;
+    font-family: Monsterrat!important;
+    margin-top: 0.5rem!important;
+  }
+ 
+  .pagination{
+    margin-left: 23rem;
+    margin-bottom: 5rem;
+    margin-top:2rem;
+    
+  }
+  .doctor-name{
+    /* text-decoration: none!important;
+    color: black!important; */
+    font-family: domaine-display-medium, Georgia, serif;
+    font-weight: 600;
+    letter-spacing: .3px;
+    font-size: 18px;
+  }
+  .card-text{
+    font-family: auto;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border: 0px solid #ccc;
+    background-color: #fff;
+  }
+  .pagination button.active {
+    background-color: #29aae4;
+    color: white;
+    border: 0px;
+  }
+  .reset-filter{
+    margin-left: 30rem;
+    height: 31px;
+    margin-top: 0.5rem;
+    width: 100px;
+    font-size: 1rem;
+    color: black;
+    font-family: Monsterrat!important;
+    background-color: #fff;
+    border: 1px solid #29aae4;;
+  }
+  .book{
+    border: 0px;
+    background-color:#21252908 ;
+    display: flex;
+  }

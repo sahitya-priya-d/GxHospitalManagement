@@ -43,9 +43,9 @@ const Login = () => {
         "http://localhost:8080/api/gxHospital/users/authenticate",
         credentials
       );
-      const { token} = response.data;
-      login({ token });
-      console.log(response.data);
+      
+      const { token, role } = response.data;
+      login({ token, role }); // Call login with token and role
 
       swal({
         title: "Login successful",
@@ -53,14 +53,17 @@ const Login = () => {
         icon: "success",
         timer: 3000,
       });
-
-      navigate("/");
+if(response.data.role==='ADMIN'){
+  navigate("/admin-dashboard");
+}
+else{
+      navigate("/home-page");}
     } catch (error) {
       console.error("Login failed", error);
       toast.error("Incorrect Credentials", { autoClose: 3000 });
     }
-
   };
+
   const forgotPassword = () => {
     navigate("/forgot-password");
   };

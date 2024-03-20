@@ -1,0 +1,34 @@
+.logo-header-img{
+    width: 87px;
+    border-radius: 50%;
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+}
+.navbar-brand{
+    margin-left: 18rem;
+    display: flex;
+}
+h3{
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    font-family: domaine-display-medium, Georgia, serif;
+    font-weight: 600;
+    letter-spacing: .3px;
+}
+.navbar-collapse{
+    margin-left: 15rem;
+}
+.location{
+    font-family: domaine-display-medium, Georgia, serif;
+    margin-top: 1.25rem;
+}
+.header-name{
+    text-decoration: none;
+    color: black;
+}
+.admin-dashboard{
+    margin-left: 33rem;
+    font-size: 29px;
+    font-weight: 700;
+    font-family: domaine-display-medium, Georgia, serif;
+}

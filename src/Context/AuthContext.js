@@ -5,21 +5,23 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  const login = ({ token }) => {
-    console.log("Login data:", { token });
+  const login = ({ token, role }) => {
     sessionStorage.setItem("token", token);
-    setUser({ token });
+    sessionStorage.setItem("role", role); // Store role in session storage
+    setUser({ token, role });
   };
 
   const logout = () => {
     sessionStorage.removeItem("token");
+    sessionStorage.removeItem("role"); // Remove role from session storage
     setUser(null);
   };
 
   useEffect(() => {
     const storedToken = sessionStorage.getItem("token");
+    const storedRole = sessionStorage.getItem("role"); // Retrieve role from session storage
     if (storedToken) {
-      setUser({ token: storedToken });
+      setUser({ token: storedToken, role: storedRole }); // Set both token and role in user state
     }
   }, []);
 

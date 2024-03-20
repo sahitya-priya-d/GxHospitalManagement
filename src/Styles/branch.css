@@ -1,0 +1,21 @@
+.branch-card{
+    border:1px solid #FFFFFF!important;
+}
+
+.branch-name {
+    text-decoration: none!important;
+    color: black!important;
+    font-family: domaine-display-medium, Georgia, serif;
+    font-weight: 600;
+    letter-spacing: .3px;
+    font-size: 18px;
+}
+.branch-url{
+    text-decoration: none!important;
+    color: black;
+}
+.branch-address{
+    font-size: 14px;
+    font-family: auto;
+    letter-spacing: 0.03rem;
+}

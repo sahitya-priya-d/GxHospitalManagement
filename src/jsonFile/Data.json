@@ -1,0 +1,32 @@
+[
+    {
+      "category": "Doctors",
+      "image": "https://media.istockphoto.com/id/1319031310/photo/doctor-writing-a-medical-prescription.jpg?s=612x612&w=0&k=20&c=DWZGM8lBb5Bun7cbxhKT1ruVxRC_itvFzA9jxgoA0N8=",
+      "endpoint":"doctors"
+    },
+    {
+      "category": "Departments",
+      "image": "https://media.istockphoto.com/id/688337988/vector/modern-hospital-building-healthcare-system-medical-facility-with-all-departments.jpg?s=612x612&w=0&k=20&c=HMMgmSCgzZYaPMRB0N8KGgfrTjSVhXEwFPqNIRGOs7A=",
+      "endpoint":"department"
+    },
+    {
+      "category": "Hospitals",
+      "image": "https://media.istockphoto.com/id/1303278663/photo/modern-building-facade-with-hospital-word-signage.jpg?s=612x612&w=0&k=20&c=XGFotldYyNSURH2PnAIR9lE7gFGH0atHekaeX6A900I=",
+      "endpoint":"hospitals"
+    },
+    {
+      "category": "Patients",
+      "image": "https://media.istockphoto.com/id/1344413214/photo/doctor-listening-to-little-boys-heart.jpg?s=612x612&w=0&k=20&c=3YVwTwHLNAxQ0AF-MTf_PLwgpxIzSPe2r0EgjBFnAbo=",
+      "endpoint":"doctors"
+    },
+    {
+      "category": "Locations",
+      "image": "https://media.istockphoto.com/id/1308342065/vector/folded-location-map-with-marker-city-map-with-pin-pointer-gps-navigation-map-with-city.jpg?s=612x612&w=0&k=20&c=E9DP4dIwSdwaveNwcYU2LzBeKuBoKLa7nsTxTWDHObw=",
+      "endpoint":"doctors"
+    },
+    {
+      "category": "Profiles",
+      "image": "https://media.istockphoto.com/id/1024061294/vector/gear-icon-outline-icon-business-services-technical-help-gear-configuration-support-center.jpg?s=612x612&w=0&k=20&c=LAN71bq9_lOv3KlpvrbWPHdFIzPHW7VO3brbM_RN_4g=",
+      "endpoint":"doctors"
+    }
+  ]
